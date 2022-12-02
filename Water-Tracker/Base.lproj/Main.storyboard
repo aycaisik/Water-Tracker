@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="576" width="414" height="320"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="AWw-Gb-xYp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="PU3-yd-6OB"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ddi-2X-7YJ">
@@ -56,6 +56,9 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addwaterbuttontapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1nA-6f-7BL"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymw-AA-U16">
                                         <rect key="frame" x="0.0" y="97" width="88" height="20.5"/>
@@ -81,6 +84,9 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addwaterbuttontapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zwq-mw-IxO"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtq-xn-vUi">
                                         <rect key="frame" x="0.0" y="97" width="88" height="20.5"/>
@@ -106,6 +112,9 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addwaterbuttontapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zah-Q8-eUg"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="800 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqH-mn-XGI">
                                         <rect key="frame" x="0.0" y="98" width="88" height="20.5"/>
@@ -120,11 +129,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ddi-2X-7YJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9gb-FG-oYk"/>
+                            <constraint firstItem="GHO-uO-WSw" firstAttribute="top" secondItem="Ddi-2X-7YJ" secondAttribute="bottom" constant="320" id="BwJ-5t-U4N"/>
                             <constraint firstAttribute="trailing" secondItem="Ddi-2X-7YJ" secondAttribute="trailing" constant="30" id="HkN-rj-L9F"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="TitleLabel" destination="Ddi-2X-7YJ" id="khb-08-WdZ"/>
+                        <outlet property="aaddwaterConstraint" destination="PU3-yd-6OB" id="doW-ZJ-SKy"/>
+                        <outlet property="addWaterConstraint" destination="GHO-uO-WSw" id="4ex-jm-xaz"/>
                         <outlet property="myButton" destination="R9r-vK-QKj" id="N5t-8D-geD"/>
+                        <outlet property="subtitleLabel" destination="w3a-GC-K8z" id="XmN-Co-HZg"/>
+                        <outlet property="titleLabel" destination="A6e-ER-j8A" id="r5u-7n-Y1r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

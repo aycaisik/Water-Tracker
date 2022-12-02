@@ -13,6 +13,7 @@
 		FD2B29E6293A2D32009FBF0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2B29E4293A2D32009FBF0C /* Main.storyboard */; };
 		FD2B29E8293A2D34009FBF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2B29E7293A2D34009FBF0C /* Assets.xcassets */; };
 		FD2B29EB293A2D34009FBF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2B29E9293A2D34009FBF0C /* LaunchScreen.storyboard */; };
+		FDE543A0293A8AC900BC20BA /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5439F293A8AC900BC20BA /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FD2B29E7293A2D34009FBF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD2B29EA293A2D34009FBF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD2B29EC293A2D34009FBF0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE5439F293A8AC900BC20BA /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FD2B29E7293A2D34009FBF0C /* Assets.xcassets */,
 				FD2B29E9293A2D34009FBF0C /* LaunchScreen.storyboard */,
 				FD2B29EC293A2D34009FBF0C /* Info.plist */,
+				FDE5439F293A8AC900BC20BA /* DataStore.swift */,
 			);
 			path = "Water-Tracker";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD2B29E3293A2D32009FBF0C /* ViewController.swift in Sources */,
+				FDE543A0293A8AC900BC20BA /* DataStore.swift in Sources */,
 				FD2B29DF293A2D32009FBF0C /* AppDelegate.swift in Sources */,
 				FD2B29E1293A2D32009FBF0C /* SceneDelegate.swift in Sources */,
 			);
