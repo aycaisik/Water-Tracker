@@ -31,7 +31,18 @@ class ViewController: UIViewController {
     }
     
     //MARK: -FUNCTIONS
+    func updateWaterLevel(Amount:Double){
+        let screenHeight = Double(view.frame.size.height)
+        let ratio = Amount/targetAmount
+        let calculatedHeight = screenHeight * ratio
+        aaddwaterConstraint.constant=CGFloat(calculatedHeight)
+        UIViewPropertyAnimator.init(duration: 0.5, dampingRatio: 0.75)  {
+            
+            self.view.layoutIfNeeded()
+        }.startAnimation()
         
+        
+    }
     //MARK: -ACTIONS
     @IBAction func addwaterbuttontapped(_ sender: Any) {
     }
