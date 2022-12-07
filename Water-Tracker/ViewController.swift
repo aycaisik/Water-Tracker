@@ -41,10 +41,26 @@ class ViewController: UIViewController {
             self.view.layoutIfNeeded()
         }.startAnimation()
         
+        func updateLabels(amount: Double){
+            let amountToTarget = (targetAmount-amount) / 1000
+            
+            if amount < targetAmount {
+                let subtitleText = String(format:"you need to drink \n%g more liters for today's water need",amountToTarget)
+                subtitleLabel.text = subtitleText
+                if amount == 0 {
+                    titleLabel.text = "Hello! \n Did you drink water today?"
+                }else{
+                    titleLabel.text = "Bravo! \n You are on the right way."
+                }
+            }else{
+                titleLabel.text = "Good job"
+            }
+        
         
     }
     //MARK: -ACTIONS
     @IBAction func addwaterbuttontapped(_ sender: Any) {
+        
     }
     
 
