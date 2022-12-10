@@ -8,30 +8,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-     //MARK: -UI ELEMENTS
+    //MARK: -UI ELEMENTS
     
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-   
+    
     @IBOutlet weak var aaddwaterConstraint: NSLayoutConstraint!
     
-  
+    
     //MARK: -PROPERTIES
     
     let waterStore = DataStore()
     let targetAmount = 2700.0
     
-
     
-//MARK: -LIFE CYCLE
+    
+    //MARK: -LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-     //   myButton.setImage(UIImage(named: //"pngwing.com-3.png"), for: //.normal)
+        //   myButton.setImage(UIImage(named: //"pngwing.com-3.png"), for: //.normal)
         
         
         
-        
+        updateAppeareance()
         
     }
     
@@ -45,6 +45,7 @@ class ViewController: UIViewController {
             
             self.view.layoutIfNeeded()
         }.startAnimation()
+    }
         
         func updateLabels(amount: Double){
             let amountToTarget = (targetAmount-amount) / 1000
@@ -61,21 +62,37 @@ class ViewController: UIViewController {
                 titleLabel.text = "Good job"
             }
             
-        
-        
-        };      func updateAppeareance(){
+        }
+        func updateAppeareance(){
             
             let currentWaterAmount = waterStore.getCurrentAmount()
             updateLabels(amount: currentWaterAmount)
             updateWaterLevel(Amount: currentWaterAmount)
             
         }
-    //MARK: -ACTIONS
-    @IBAction func addwaterbuttontapped(_ sender: Any) {
-       
-    }
+        //MARK: -ACTIONS
+        func addwaterbuttontapped(_ sender: Any) {
+            var waterAmount = 0.0
+             
+            switch (sender as AnyObject).tag{
+            case 0:
+                waterAmount=200
+            case 1:
+                waterAmount=500
+            case 2:
+                waterAmount=800
+            default:
+                break
+            }
+            waterStore.addWater(amount: waterAmount)
+            updateAppeareance()
+            
+            
+            
+        }
+        
+        
     
-
 }
 
     
