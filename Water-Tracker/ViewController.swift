@@ -27,7 +27,12 @@ class ViewController: UIViewController {
 //MARK: -LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-     //   myButton.setImage(UIImage(named: //"pngwing.com-3.png"), for: .normal)
+     //   myButton.setImage(UIImage(named: //"pngwing.com-3.png"), for: //.normal)
+        
+        
+        
+        
+        
     }
     
     //MARK: -FUNCTIONS
@@ -55,12 +60,19 @@ class ViewController: UIViewController {
             }else{
                 titleLabel.text = "Good job"
             }
+            
         
         
-    }
+        };      func updateAppeareance(){
+            
+            let currentWaterAmount = waterStore.getCurrentAmount()
+            updateLabels(amount: currentWaterAmount)
+            updateWaterLevel(Amount: currentWaterAmount)
+            
+        }
     //MARK: -ACTIONS
     @IBAction func addwaterbuttontapped(_ sender: Any) {
-        
+       
     }
     
 
